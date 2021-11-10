@@ -7,11 +7,7 @@ import { Image, ImageWrapper } from './SliderStyled';
 
 const Slider = ({ slides }) => {
   return (
-    <Swiper
-      spaceBetween={1}
-      slidesPerView={1}
-      breakpoints={{ 900: { slidesPerView: 2 }, 1020: { slidesPerView: 3 } }}
-    >
+    <Swiper spaceBetween={-50} slidesPerView={2} breakpoints={{ 1020: { slidesPerView: 3 } }}>
       {slides?.map((slide, idx) => (
         <SwiperSlide key={idx}>
           <ImageWrapper>

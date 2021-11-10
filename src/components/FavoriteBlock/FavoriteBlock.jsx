@@ -50,7 +50,7 @@ const FavoriteBlock = ({
 FavoriteBlock.propTypes = {
   list: PropTypes.array,
   checkIn: PropTypes.string,
-  limitDays: PropTypes.number,
+  limitDays: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   addHandler: PropTypes.func,
   sortFavoriteHotelsHandler: PropTypes.func,
   ascending: PropTypes.string,

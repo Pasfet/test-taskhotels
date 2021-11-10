@@ -15,6 +15,7 @@ import { ReactComponent as HotelIcon } from '../../assets/house-icon.svg';
 import { ReactComponent as StarIcon } from '../../assets/star.svg';
 import { ReactComponent as FavoriteIcon } from '../../assets/favorite-icon.svg';
 import PropTypes from 'prop-types';
+import { declOfNum } from '../../utils/utils';
 
 const TableItem = ({ item, checkIn, addHandler, favorite, limitDays, inFavorite }) => {
   const normalizeDate = inputDate => {
@@ -34,7 +35,8 @@ const TableItem = ({ item, checkIn, addHandler, favorite, limitDays, inFavorite 
         <ItemContentWrapper>
           <ItemTitle> {item?.hotelName} </ItemTitle>
           <ItemCheckIn>
-            {normalizeDate(checkIn)} - {isNaN(limitDays) ? 0 : item?.limitDays || limitDays} дней
+            {normalizeDate(checkIn)} - {isNaN(limitDays) ? 0 : item?.limitDays || limitDays}{' '}
+            {declOfNum(item?.limitDays || limitDays, ['день', 'дня', 'дней'])}
           </ItemCheckIn>
           <ItemRatingWrapper>
             {Array.from({ length: 5 }, (_, i) => i + 1).map(star =>
@@ -71,7 +73,7 @@ TableItem.propTypes = {
   checkIn: PropTypes.string,
   addHandler: PropTypes.func,
   favorite: PropTypes.bool,
-  limitDays: PropTypes.number,
+  limitDays: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   inFavorite: PropTypes.bool,
 };
 

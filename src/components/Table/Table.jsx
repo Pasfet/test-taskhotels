@@ -2,7 +2,7 @@ import { ScrollTable, TableStyled } from './TableStyled';
 import { memo } from 'react';
 import TableItem from '../TableItem/TableItem';
 import PropTypes from 'prop-types';
-import { checkInFavorite } from './checkInFavorite';
+import { findElement } from '../../utils/utils';
 
 const Table = ({
   list,
@@ -26,7 +26,7 @@ const Table = ({
                 addHandler={addHandler}
                 favorite={sidebar}
                 limitDays={limitDays}
-                inFavorite={checkInFavorite(item, favoriteHotelsList)}
+                inFavorite={findElement(item?.hotelId, 'hotelId', favoriteHotelsList) && true}
               />
             ))}
         </tbody>
@@ -36,12 +36,12 @@ const Table = ({
 };
 
 Table.propTypes = {
-  list: PropTypes.array || PropTypes.object,
+  list: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   checkIn: PropTypes.string,
   addHandler: PropTypes.func,
   height: PropTypes.string,
   sidebar: PropTypes.bool,
-  limitDays: PropTypes.number,
+  limitDays: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   favoriteHotelsList: PropTypes.array,
 };
 

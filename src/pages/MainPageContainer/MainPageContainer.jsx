@@ -36,6 +36,7 @@ import {
 } from '../../store/hotelsReducer/hotelsSelectors';
 import FavoriteBlock from '../../components/FavoriteBlock/FavoriteBlock';
 import { sortedHelper } from './useSortedTable';
+import { declOfNum, findElement, getLimitDays } from '../../utils/utils';
 
 const MainPageContainer = () => {
   const dispatch = useDispatch();
@@ -56,14 +57,6 @@ const MainPageContainer = () => {
     checkOut: { name: 'checkOut', value: `${year}-${month}-${day + 1}` },
     limitDays: { name: 'limitDays', value: 1 },
   });
-
-  const getLimitDays = (from, end) => {
-    const fromDate = new Date(from).getDate();
-    const endDate = new Date(end).getDate();
-    const days = fromDate - endDate;
-
-    return Math.abs(days);
-  };
 
   const changeHandler = (name, value) => {
     if (name !== 'location') {
@@ -129,7 +122,7 @@ const MainPageContainer = () => {
   };
 
   const addToFavoriteHandler = hotel => {
-    const find = favoriteHotelsList.find(item => item.hotelId === hotel.hotelId);
+    const find = findElement(hotel.hotelId, 'hotelId', favoriteHotelsList);
     if (find) {
       dispatch(removeFromFavorite(find.hotelId));
     } else {
@@ -187,9 +180,9 @@ const MainPageContainer = () => {
             <Slider slides={hotelsImg} />
           </MainContentSlider>
           <MainHotelFavoriteCount>
-            Добавлено в Избранное:{' '}
+            Добавлено в избранное:{' '}
             <MainHotelFavoriteCountSpan>{favoriteHotelsListLength}</MainHotelFavoriteCountSpan>{' '}
-            отелей
+            {declOfNum(favoriteHotelsListLength, ['отель', 'отеля', 'отелей'])}
           </MainHotelFavoriteCount>
           <Table
             list={hotelsList}
