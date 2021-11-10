@@ -35,14 +35,17 @@ export const FavoriteBlockActionsButton = styled.button`
   align-items: center;
   justify-content: space-between;
   margin-right: 10px;
+  transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 5px 0px #5a5a5a;
   }
 
   & > svg {
     margin-left: 5px;
     width: 16px;
     height: 16px;
+    transform: rotate(${props => (props.ascending === 'ascending' ? '0' : '180deg')});
   }
 `;

@@ -133,7 +133,9 @@ const MainPageContainer = () => {
     if (find) {
       dispatch(removeFromFavorite(find.hotelId));
     } else {
-      dispatch(addToFavorite({ ...hotel, limitDays: searchForm.limitDays.value }));
+      dispatch(
+        addToFavorite({ ...hotel, limitDays: searchForm.limitDays.value, inFavorite: true }),
+      );
     }
   };
 
@@ -176,6 +178,7 @@ const MainPageContainer = () => {
             checkIn={searchForm.checkIn.value}
             addHandler={addToFavoriteHandler}
             sortFavoriteHotelsHandler={sortFavoriteHotelsHandler}
+            ascending={ascending}
           />
         </SideBar>
         <MainContentWrapper>
@@ -184,15 +187,16 @@ const MainPageContainer = () => {
             <Slider slides={hotelsImg} />
           </MainContentSlider>
           <MainHotelFavoriteCount>
-            Добавлено в Избранное:
+            Добавлено в Избранное:{' '}
             <MainHotelFavoriteCountSpan>{favoriteHotelsListLength}</MainHotelFavoriteCountSpan>{' '}
-            отеля
+            отелей
           </MainHotelFavoriteCount>
           <Table
             list={hotelsList}
             limitDays={searchForm.limitDays.value}
             checkIn={searchForm.checkIn.value}
             addHandler={addToFavoriteHandler}
+            favoriteHotelsList={favoriteHotelsList}
           />
         </MainContentWrapper>
       </MainContent>

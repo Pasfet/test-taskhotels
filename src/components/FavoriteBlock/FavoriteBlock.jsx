@@ -8,16 +8,29 @@ import { ReactComponent as SortIcon } from '../../assets/arrows-sort.svg';
 import Table from '../Table/Table';
 import PropTypes from 'prop-types';
 
-const FavoriteBlock = ({ list, checkIn, limitDays, addHandler, sortFavoriteHotelsHandler }) => {
+const FavoriteBlock = ({
+  list,
+  checkIn,
+  limitDays,
+  addHandler,
+  sortFavoriteHotelsHandler,
+  ascending,
+}) => {
   return (
     <FavoriteBlockWrapper>
       <FavoriteBlockTitle>Избранное</FavoriteBlockTitle>
       <FavoriteBlockActions>
-        <FavoriteBlockActionsButton onClick={() => sortFavoriteHotelsHandler('stars')}>
+        <FavoriteBlockActionsButton
+          onClick={() => sortFavoriteHotelsHandler('stars')}
+          ascending={ascending}
+        >
           Рейтинг
           <SortIcon />
         </FavoriteBlockActionsButton>
-        <FavoriteBlockActionsButton onClick={() => sortFavoriteHotelsHandler('priceFrom')}>
+        <FavoriteBlockActionsButton
+          onClick={() => sortFavoriteHotelsHandler('priceFrom')}
+          ascending={ascending}
+        >
           Цена
           <SortIcon />
         </FavoriteBlockActionsButton>
@@ -40,6 +53,7 @@ FavoriteBlock.propTypes = {
   limitDays: PropTypes.number,
   addHandler: PropTypes.func,
   sortFavoriteHotelsHandler: PropTypes.func,
+  ascending: PropTypes.string,
 };
 
 export default FavoriteBlock;

@@ -16,12 +16,11 @@ import { ReactComponent as StarIcon } from '../../assets/star.svg';
 import { ReactComponent as FavoriteIcon } from '../../assets/favorite-icon.svg';
 import PropTypes from 'prop-types';
 
-const TableItem = ({ item, checkIn, addHandler, favorite, limitDays }) => {
+const TableItem = ({ item, checkIn, addHandler, favorite, limitDays, inFavorite }) => {
   const normalizeDate = inputDate => {
     const date = inputDate.split('-').reverse();
     return date.join('.');
   };
-
   return (
     <ItemRow>
       {!favorite && (
@@ -35,7 +34,7 @@ const TableItem = ({ item, checkIn, addHandler, favorite, limitDays }) => {
         <ItemContentWrapper>
           <ItemTitle> {item?.hotelName} </ItemTitle>
           <ItemCheckIn>
-            {normalizeDate(checkIn)} - {item?.limitDays || limitDays} дней
+            {normalizeDate(checkIn)} - {isNaN(limitDays) ? 0 : item?.limitDays || limitDays} дней
           </ItemCheckIn>
           <ItemRatingWrapper>
             {Array.from({ length: 5 }, (_, i) => i + 1).map(star =>
@@ -50,7 +49,11 @@ const TableItem = ({ item, checkIn, addHandler, favorite, limitDays }) => {
       </ItemCol>
       <ItemCol width="30%">
         <ItemActionWrapper>
-          <ItemActionBtn onClick={() => addHandler(item)} data-testid="addToFavorite">
+          <ItemActionBtn
+            onClick={() => addHandler(item)}
+            data-testid="addToFavorite"
+            favorite={(item?.inFavorite || inFavorite) && true}
+          >
             <FavoriteIcon />
           </ItemActionBtn>
           <ItemPrice>
@@ -69,6 +72,7 @@ TableItem.propTypes = {
   addHandler: PropTypes.func,
   favorite: PropTypes.bool,
   limitDays: PropTypes.number,
+  inFavorite: PropTypes.bool,
 };
 
 export default TableItem;

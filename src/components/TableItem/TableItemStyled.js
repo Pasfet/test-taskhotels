@@ -76,6 +76,13 @@ export const ItemActionBtn = styled.button`
   background: transparent;
   border: none;
 
+  & > svg {
+    fill: ${props => (props.favorite ? '#E55858' : '#fff')};
+    &:hover {
+      fill: #e55858;
+    }
+  }
+
   &:hover {
     cursor: pointer;
   }

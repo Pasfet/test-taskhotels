@@ -2,13 +2,22 @@ import { ScrollTable, TableStyled } from './TableStyled';
 import { memo } from 'react';
 import TableItem from '../TableItem/TableItem';
 import PropTypes from 'prop-types';
+import { checkInFavorite } from './checkInFavorite';
 
-const Table = ({ list, checkIn, addHandler, height, sidebar = false, limitDays }) => {
+const Table = ({
+  list,
+  checkIn,
+  addHandler,
+  height,
+  sidebar = false,
+  limitDays,
+  favoriteHotelsList,
+}) => {
   return (
     <ScrollTable height={height}>
       <TableStyled>
         <tbody>
-          {list &&
+          {Array.isArray(list) &&
             list?.map(item => (
               <TableItem
                 key={item?.hotelId}
@@ -17,6 +26,7 @@ const Table = ({ list, checkIn, addHandler, height, sidebar = false, limitDays }
                 addHandler={addHandler}
                 favorite={sidebar}
                 limitDays={limitDays}
+                inFavorite={checkInFavorite(item, favoriteHotelsList)}
               />
             ))}
         </tbody>
@@ -26,12 +36,13 @@ const Table = ({ list, checkIn, addHandler, height, sidebar = false, limitDays }
 };
 
 Table.propTypes = {
-  list: PropTypes.array,
+  list: PropTypes.array || PropTypes.object,
   checkIn: PropTypes.string,
   addHandler: PropTypes.func,
   height: PropTypes.string,
   sidebar: PropTypes.bool,
   limitDays: PropTypes.number,
+  favoriteHotelsList: PropTypes.array,
 };
 
 export default memo(Table);
