@@ -6,7 +6,7 @@ function* fetchHotelsWorker(params) {
   const { location, checkIn, checkOut } = params.payload;
   const list = yield call(() =>
     fetch(
-      `http://engine.hotellook.com/api/v2/cache.json?location=${location.value}&currency=rub&checkIn=${checkIn.value}&checkOut=${checkOut.value}&limit=10`,
+      `https://engine.hotellook.com/api/v2/cache.json?location=${location.value}&currency=rub&checkIn=${checkIn.value}&checkOut=${checkOut.value}&limit=10`,
     )
       .then(response => response.json())
       .catch(e => console.log(e))
