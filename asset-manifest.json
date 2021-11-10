@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/test-taskhotels/static/js/main.4c804164.chunk.js",
-    "main.js.map": "/test-taskhotels/static/js/main.4c804164.chunk.js.map",
+    "main.js": "/test-taskhotels/static/js/main.c7bb9aee.chunk.js",
+    "main.js.map": "/test-taskhotels/static/js/main.c7bb9aee.chunk.js.map",
     "runtime-main.js": "/test-taskhotels/static/js/runtime-main.ca0fd944.js",
     "runtime-main.js.map": "/test-taskhotels/static/js/runtime-main.ca0fd944.js.map",
     "static/css/2.e6a755d0.chunk.css": "/test-taskhotels/static/css/2.e6a755d0.chunk.css",
@@ -13,7 +13,7 @@
     "static/media/arrows-sort.b59b3573.svg": "/test-taskhotels/static/media/arrows-sort.b59b3573.svg",
     "static/media/background-image.2fa10d06.jpg": "/test-taskhotels/static/media/background-image.2fa10d06.jpg",
     "static/media/chevron-right.9998c04c.svg": "/test-taskhotels/static/media/chevron-right.9998c04c.svg",
-    "static/media/favorite-icon.283193a3.svg": "/test-taskhotels/static/media/favorite-icon.283193a3.svg",
+    "static/media/favorite-icon.2650ca33.svg": "/test-taskhotels/static/media/favorite-icon.2650ca33.svg",
     "static/media/house-icon.d3be972f.svg": "/test-taskhotels/static/media/house-icon.d3be972f.svg",
     "static/media/logout-icon.6541d622.svg": "/test-taskhotels/static/media/logout-icon.6541d622.svg",
     "static/media/star.81260b05.svg": "/test-taskhotels/static/media/star.81260b05.svg"
@@ -22,6 +22,6 @@
     "static/js/runtime-main.ca0fd944.js",
     "static/css/2.e6a755d0.chunk.css",
     "static/js/2.fc09b5f4.chunk.js",
-    "static/js/main.4c804164.chunk.js"
+    "static/js/main.c7bb9aee.chunk.js"
   ]
 }
