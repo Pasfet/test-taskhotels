@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/Pasfet/test-taskhotels/static/js/main.aff45987.chunk.js",
-    "main.js.map": "/Pasfet/test-taskhotels/static/js/main.aff45987.chunk.js.map",
-    "runtime-main.js": "/Pasfet/test-taskhotels/static/js/runtime-main.6b701313.js",
-    "runtime-main.js.map": "/Pasfet/test-taskhotels/static/js/runtime-main.6b701313.js.map",
-    "static/css/2.e6a755d0.chunk.css": "/Pasfet/test-taskhotels/static/css/2.e6a755d0.chunk.css",
-    "static/js/2.637402fe.chunk.js": "/Pasfet/test-taskhotels/static/js/2.637402fe.chunk.js",
-    "static/js/2.637402fe.chunk.js.map": "/Pasfet/test-taskhotels/static/js/2.637402fe.chunk.js.map",
-    "index.html": "/Pasfet/test-taskhotels/index.html",
-    "static/css/2.e6a755d0.chunk.css.map": "/Pasfet/test-taskhotels/static/css/2.e6a755d0.chunk.css.map",
-    "static/js/2.637402fe.chunk.js.LICENSE.txt": "/Pasfet/test-taskhotels/static/js/2.637402fe.chunk.js.LICENSE.txt",
-    "static/media/arrows-sort.b59b3573.svg": "/Pasfet/test-taskhotels/static/media/arrows-sort.b59b3573.svg",
-    "static/media/background-image.2fa10d06.jpg": "/Pasfet/test-taskhotels/static/media/background-image.2fa10d06.jpg",
-    "static/media/chevron-right.9998c04c.svg": "/Pasfet/test-taskhotels/static/media/chevron-right.9998c04c.svg",
-    "static/media/favorite-icon.3d60a0c0.svg": "/Pasfet/test-taskhotels/static/media/favorite-icon.3d60a0c0.svg",
-    "static/media/house-icon.d3be972f.svg": "/Pasfet/test-taskhotels/static/media/house-icon.d3be972f.svg",
-    "static/media/logout-icon.6541d622.svg": "/Pasfet/test-taskhotels/static/media/logout-icon.6541d622.svg",
-    "static/media/star.81260b05.svg": "/Pasfet/test-taskhotels/static/media/star.81260b05.svg"
+    "main.js": "/test-taskhotels/static/js/main.aff45987.chunk.js",
+    "main.js.map": "/test-taskhotels/static/js/main.aff45987.chunk.js.map",
+    "runtime-main.js": "/test-taskhotels/static/js/runtime-main.ca0fd944.js",
+    "runtime-main.js.map": "/test-taskhotels/static/js/runtime-main.ca0fd944.js.map",
+    "static/css/2.e6a755d0.chunk.css": "/test-taskhotels/static/css/2.e6a755d0.chunk.css",
+    "static/js/2.fc09b5f4.chunk.js": "/test-taskhotels/static/js/2.fc09b5f4.chunk.js",
+    "static/js/2.fc09b5f4.chunk.js.map": "/test-taskhotels/static/js/2.fc09b5f4.chunk.js.map",
+    "index.html": "/test-taskhotels/index.html",
+    "static/css/2.e6a755d0.chunk.css.map": "/test-taskhotels/static/css/2.e6a755d0.chunk.css.map",
+    "static/js/2.fc09b5f4.chunk.js.LICENSE.txt": "/test-taskhotels/static/js/2.fc09b5f4.chunk.js.LICENSE.txt",
+    "static/media/arrows-sort.b59b3573.svg": "/test-taskhotels/static/media/arrows-sort.b59b3573.svg",
+    "static/media/background-image.2fa10d06.jpg": "/test-taskhotels/static/media/background-image.2fa10d06.jpg",
+    "static/media/chevron-right.9998c04c.svg": "/test-taskhotels/static/media/chevron-right.9998c04c.svg",
+    "static/media/favorite-icon.3d60a0c0.svg": "/test-taskhotels/static/media/favorite-icon.3d60a0c0.svg",
+    "static/media/house-icon.d3be972f.svg": "/test-taskhotels/static/media/house-icon.d3be972f.svg",
+    "static/media/logout-icon.6541d622.svg": "/test-taskhotels/static/media/logout-icon.6541d622.svg",
+    "static/media/star.81260b05.svg": "/test-taskhotels/static/media/star.81260b05.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b701313.js",
+    "static/js/runtime-main.ca0fd944.js",
     "static/css/2.e6a755d0.chunk.css",
-    "static/js/2.637402fe.chunk.js",
+    "static/js/2.fc09b5f4.chunk.js",
     "static/js/main.aff45987.chunk.js"
   ]
 }
